@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Mental Health Predictor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+
+  <div class="app">
+    <header>
+      <h1>Student Mental Health Predictor</h1>
+      <p>Estimate a wellbeing score from social media use, sleep, study and activity.</p>
+    </header>
+
+    <div class="grid">
+      <form id="form" class="glass form" novalidate>
+        <div class="fields">
+          <label>Age
+            <input type="number" id="Age" name="Age" min="11" max="100" step="1" value="22" required>
+          </label>
+          <label>Gender
+            <select id="Gender" name="Gender"></select>
+          </label>
+          <label>Country
+            <select id="grouped_country" name="grouped_country"></select>
+          </label>
+
+          <label>Academic level
+            <select id="Academic_Level" name="Academic_Level"></select>
+          </label>
+          <label>Most used platform
+            <select id="Most_Used_Platform" name="Most_Used_Platform"></select>
+          </label>
+          <label>Purpose of use
+            <select id="Purpose_Of_Use" name="Purpose_Of_Use"></select>
+          </label>
+
+          <label>Daily social media (hours)
+            <input type="number" id="Avg_Daily_Usage_Hours" name="Avg_Daily_Usage_Hours" min="0.1" max="23.9" step="0.1" value="3.5" required>
+          </label>
+          <label>Phone unlocks per day
+            <input type="number" id="Daily_Unlocks" name="Daily_Unlocks" min="1" step="1" value="45" required>
+          </label>
+          <label>Study (hours)
+            <input type="number" id="Study_Hours" name="Study_Hours" min="0.1" max="23.9" step="0.1" value="5" required>
+          </label>
+
+          <label>Physical activity (hours)
+            <input type="number" id="Physical_Activity_Hours" name="Physical_Activity_Hours" min="0.1" max="23.9" step="0.1" value="1.5" required>
+          </label>
+          <label>Sleep per night (hours)
+            <input type="number" id="Sleep_Hours_Per_Night" name="Sleep_Hours_Per_Night" min="0.1" max="23.9" step="0.1" value="7" required>
+          </label>
+          <label>Stress level
+            <select id="Stress_Level" name="Stress_Level"></select>
+          </label>
+        </div>
+
+        <p id="error" class="error" role="alert" hidden></p>
+        <button type="submit" id="submit"><span class="spinner" hidden></span><span class="label">Predict score</span></button>
+      </form>
+
+      <section class="glass result" id="result" data-level="idle" aria-live="polite">
+        <div class="gauge">
+          <svg viewBox="0 0 200 200" aria-hidden="true">
+            <circle class="track" cx="100" cy="100" r="86"/>
+            <circle class="bar" id="bar" cx="100" cy="100" r="86" transform="rotate(-90 100 100)"/>
+          </svg>
+          <div class="center">
+            <span id="scoreNum">–</span>
+            <small>out of 10</small>
+          </div>
+        </div>
+        <span class="badge" id="badge">Waiting</span>
+        <p id="message">Fill in the form and press “Predict score”.</p>
+      </section>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
