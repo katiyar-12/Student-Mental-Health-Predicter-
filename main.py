@@ -56,7 +56,7 @@ def predict(data : StudentData ) :
       input_row = pd.DataFrame([{
             'Age' : data.Age ,
             'Gender' : data.Gender ,
-            'grouped_country' : data.grouped_country , 
+            'grouped_Country' : data.grouped_country , 
             'Academic_Level' : data.Academic_Level ,
             'Most_Used_Platform' : data.Most_Used_Platform ,
             'Purpose_Of_Use' : data.Purpose_Of_Use ,
