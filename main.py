@@ -5,11 +5,9 @@ from pydantic import BaseModel  , Field
 from typing import Literal 
 import pandas as pd 
 from fastapi.middleware.cors import CORSMiddleware 
-from fastapi.staticfiles import StaticFiles
 
 app = FastAPI()
 
-app.mount("/static", StaticFiles(directory="static"), name="static")
 
 app.add_middleware(
       CORSMiddleware , 
