@@ -1,4 +1,4 @@
-const API_URL = "https://student-mental-health-predicter-3.onrender.com";
+const API_URL = "https://student-mental-health-predicter-3.onrender.com/predict";
 const CIRC = 2 * Math.PI * 86; // gauge circumference
 const MAX_SCORE = 10;          // assumed scale of the model's output
 
