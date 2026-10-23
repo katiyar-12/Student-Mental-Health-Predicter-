@@ -1,7 +1,6 @@
-pandas 
-uvicorn 
-pydantic
-joblib
-pandas 
-scikit-learn
 fastapi
+uvicorn
+pydantic
+pandas
+joblib
+scikit-learn==1.6.1
