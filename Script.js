@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:8000/predict";
+const API_URL = "/predict";
 const CIRC = 2 * Math.PI * 86; // gauge circumference
 const MAX_SCORE = 10;          // assumed scale of the model's output
 
